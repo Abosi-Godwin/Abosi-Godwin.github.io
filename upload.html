@@ -1,0 +1,115 @@
+<html>
+		<Head>
+<title> Copywriter</title>
+<style>
+{
+    background-color: #F5F5F5;
+    color: #555;
+    font-size: 1.1em;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.container {
+    margin: 100px auto;
+    max-width: 700px;
+}
+
+.element {
+    width: 50px;
+    height: 50px;
+    background-color: #009966;
+    position: relative;
+    margin: 0 auto;
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-animation-duration: 2s, 2s;
+    animation-duration: 2s, 2s;
+    -webkit-animation-iteration-count: infinite, infinite;
+    animation-iteration-count: infinite, infinite;
+}
+
+@-webkit-keyframes shake-rotate {
+    0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
+        left: 50px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    5%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95% {
+        left: -50px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes shake-rotate {
+    0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
+        left: 50px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    5%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95% {
+        left: -50px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+
+@-webkit-keyframes bounce {
+    from {
+        top: 150px;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    25% {
+        top: 50px;
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    50% {
+        top: 200px;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    75% {
+        top: 75px;
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    to {
+        top: 150px;
+    }
+}
+
+@keyframes bounce {
+    from {
+        top: 150px;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    25% {
+        top: 50px;
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    50% {
+        top: 200px;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    75% {
+        top: 75px;
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    to {
+        top: 150px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="element"></div>
+</div>
+
+</body>
+</html>
