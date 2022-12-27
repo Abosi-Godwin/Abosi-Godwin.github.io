@@ -1,22 +1,26 @@
-
 let hamburger = document.querySelector(".icon");
 let ul = document.querySelector(".nav-links");
 let icon = document.querySelector(".icon");
+let navBox = document.querySelector("#navBox");
+
 let slideIcon = document.querySelector(".slide");
+
+const hireMe = document.querySelector('.hire');
 
 let ulOpen = false;
 let clicked = false;
 hamburger.addEventListener("click", () => {
   if (!ulOpen) {
-    ul.classList.add("open");
-    icon.classList.add("trans");
-    
+    ul.classList.toggle('open');
+    icon.classList.toggle('trans')
     ulOpen = true;
   } else{
-    ul.classList.remove("open");
-    icon.classList.remove("trans");
+    ul.classList.toggle("open");
+    icon.classList.toggle("trans");
     ulOpen = false;
-}});
+}
+  
+});
 
 let links = document.querySelectorAll(" ul li");
 links.forEach((el)=>{
@@ -26,52 +30,50 @@ links.forEach((el)=>{
     ulOpen = false;
 
   })
-})
+});
 
 window.addEventListener("scroll",() => {
   
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("navBox").style.backgroundColor = "#000140";
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    navBox.classList.add('color');
 slideIcon.style.display = "none";
+hireMe.style.backgroundColor = '#f8a840';
   } else {
-    document.getElementById("navBox").style.backgroundColor = "transparent";
-    slideIcon.style.display = "block"
+    navBox.classList.remove('color');
+    hireMe.style.backgroundColor='transparent';
+    slideIcon.style.display = "block";
   }
 });
 
 let reviews = [
   {
-    img: "./Images/Assets/Food1.jpg",
-    name : " Brain nack",
-    job: "farmer",
-    qoute: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do suspendisse potenti nullam ac tortor. "
+    name : " - Katie",
+    job: "Owner of Katie's Kakes",
+    qoute: "I recently hired Abosi Godwin to revamp my Shopify store and I am blown away by the results. The team was professional, efficient, and delivered exactly what I was looking for. As a small business owner, it's crucial to have a strong online presence and Abos Godwin has definitely helped me achieve that. Highly recommend it! "
+  },
+
+  {
+    name : " - Michael",
+    job: " Owner of The Artisanal Market",
+    qoute: "I can't say enough good things about Abosi Godwin and his work on my Shopify store. From start to finish, he was a pleasure to work with and truly understood my vision. The end result was a sleek, user-friendly store that has already seen a significant increase in sales. Thank you, Abosi Godwin!. "
   },
   {
-    img: "./Images/Assets/Food2.png",
-    name : " Arto morgan",
-    job: " Actress",
-    qoute: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et d pellentesque. "
+    name : " -Sara",
+    job: "Owner of Sara's Soaps",
+    qoute: "As a busy entrepreneur, I don't have a lot of time to devote to my online store. That's why I was so grateful to find Abosi Godwin. He handled everything from design to marketing and made the process so easy for me. The results have been fantastic and I've already recommended them to several colleagues. Thank you, Abosi Godwin!"
   },
   {
-    img: "./Images/Assets/Food3.png",
-    name : "Ben peter",
-    job: "Chef",
-    qoute: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Porttitor eget dolor morbi non arcu risus.. "
+    name : " - John",
+    job: "Owner of John's Jerky",
+    qoute: "I've worked with a lot of different freelancers on my Shopify store, but none have been as fantastic as Abosi Godwin. From the initial consultation to the final product, he was professional, efficient, and a pleasure to work with. My store looks amazing and I've already seen a huge increase in traffic and sales. Thank you, Abosi Godwin!"
   },
   {
-    img: "./Images/Assets/Foods.png",
-    name : "Mather Nicholas",
-    job: "Entrepreneur",
-    qoute: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu Porttitor eget dolor mo. "
-  },
-  {
-    img: "./Images/Review1.jpg",
-    name : "Bob Martin",
-    job: "Activist",
-    qoute: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna ale. "
+    name : "- Rachel",
+    job: "Owner of Rachel's Boutique",
+    qoute: "I was hesitant to invest in a Shopify store development and marketing company, but Abosi Godwin completely exceeded my expectations. Not only did he design a beautiful store, but he also provided valuable insights and strategies for marketing and growing my business. I can't recommend them enough!" 
+
   },
   ];
-  let reviewerImg = document.querySelector(".reviewImg");
   let reviewer = document.querySelector(".name");
   let reviewersJob = document.querySelector(".job");
   let reviewQuote = document.querySelector(".reviewQuote");
@@ -85,7 +87,6 @@ let reviews = [
 
   
   function updateReview(){
-    reviewerImg.src = reviews[current].img;
     reviewer.innerHTML = reviews[current].name;
     reviewersJob.innerHTML = reviews[current].job;
     reviewQuote.innerHTML = reviews[current].qoute;
@@ -105,23 +106,7 @@ let reviews = [
     }
     updateReview();
   });
-  const modalBox = document.querySelector(".more-info");
-  modalBox.style.display = "none";
-  
-const openModals = document.querySelectorAll(".openModal");
-/**/
-openModals.forEach(openModal =>{
-  openModal.addEventListener("click", () => {
-    modalBox.style.display = "block";
-  })
-})
-const closeModals = document.querySelectorAll(".cancel");
-closeModals.forEach(closeModal =>{
-  closeModal.addEventListener("click", () => {
-    modalBox.style.display = "none";
-  })
-})
-
+ 
 
 let date = new Date();
 let thisYear = date.getFullYear();
@@ -131,7 +116,6 @@ year.innerHTML = thisYear;
 const workImages = document.querySelectorAll(".image");
 const countContainer = document.querySelector("#countingBox");
 
-//console.log(countContainer)
 
 
   const fadeOptions = {threshold: 0.6};
@@ -165,30 +149,40 @@ function countNow(entries, observer) {
 
 entries.forEach(entry => {
  if(entry.isIntersecting) {
-/* =================================*/
- counters.forEach(counter => {
-  const letsCount = function() {
-    
-  let targetNumer = +counter.getAttribute("data-target");
+const counters = document.querySelectorAll('.counter');
 
-  let toCount = +counter.innerHTML;
-  
-  let countSpeed = Math.ceil(targetNumer / Speed);
-  
-  if(toCount < targetNumer) {
- counter.innerHTML = toCount + countSpeed;
- setTimeout(letsCount,10)
-  } else {
-    counter.innerHTML = targetNumer;
-  }
+function updateCounter() {
+  counters.forEach(counter => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+
+    const isVisible = isInViewport(counter);
+
+    if (isVisible) {
+      const inc = target / 200;
+      if (count < target) {
+        counter.innerText = Math.ceil(count + inc);
+        setTimeout(updateCounter, 25);
+      } else {
+        counter.innerText = target;
       }
-      
- letsCount();
-      })
-      
-/* =================================*/
- 
-      //observer.unobserve(entry.target)
+    }
+  });
+}
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= windowHeight
+  );
+}
+
+window.addEventListener('scroll', updateCounter);
+
+updateCounter();
+
     }
 
   })
@@ -209,7 +203,6 @@ class Typewriter {
   type(){
       let currentWord = this.wordIndex % this.textToType.length;
   let oneWord = this.textToType[currentWord];
-// console.log(this.wordIndex++);
   if (this.isDeleting) {
  
     this.txt = oneWord.substring(0, this.txt.length - 1);
@@ -218,7 +211,7 @@ class Typewriter {
 this.txt = oneWord.substring(0, this.txt.length + 1);
   };
   
-  this.textElement.innerHTML = ` <span class="spanned"> ${this.txt} </span>`;
+  this.textElement.innerHTML = this.txt;
   
   let typeSpeed = 300;
   if (this.isDeleting) {
@@ -243,12 +236,13 @@ document.addEventListener("DOMContentLoaded", startTyping());
 function startTyping() {
 let textElement = document.querySelector(".typeText");
 
-const loader = document.querySelector(".loadCan");
-loader.style.display = "none";
 let typeDelay = textElement.getAttribute("data-wait");
 
 let textToType = JSON.parse(textElement.getAttribute("data-words"));
 
 new Typewriter(textElement, typeDelay, textToType)
 }
-//console.log(this.wordIndex);
+window.addEventListener("load", function() {
+  const preloader = document.getElementById("preloader");
+  preloader.style.display = "none";
+});
