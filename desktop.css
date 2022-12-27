@@ -1,0 +1,164 @@
+nav{
+  max-width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 5vh;
+}
+.navDiv{
+  width: 30vw;
+  height: 100%;
+  top: 10px;
+  
+}
+.logo{
+  padding-bottom: 20px;
+}
+.hamburger{
+  display: none;
+}
+.nav-links{
+  left: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: calc(100vw - 30vw);
+  max-height: 100%;
+  background: inherit;
+}
+ul li{
+  display: inline-block;
+}
+.hire{
+  width: 80%;
+  background: transparent;
+}
+.hire.color{
+  background: #f8a840;
+}
+header .heading{
+  justify-content: flex-end;
+}
+
+header .heading h1,h2{
+  margin: 20px 0;
+}
+header .btns{
+  flex-direction: row;
+  padding: 60px 10px;
+  width: 100%;
+}
+.hireBtn{
+  width: 30%;
+}
+
+#InfoSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#InfoSection .aboutDiv{
+  grid-column: span 2;
+}
+#InfoSection img{
+  display: block;
+  height: 100%;
+}
+header .heading {
+  padding: 0 10rem;
+}
+#InfoSection .aboutInfo{
+  padding: 10px 2rem;
+}
+.prospect div h3 span{
+  display: inline;
+}
+.prospect button{
+  width: 30%;
+}
+.descriptions{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.mySkills{
+  padding: 0 20px;
+  grid-template-columns: 1fr 1fr;
+}
+.designing, .marketing{
+  width:  45vw;
+  margin-top: 0;
+}
+.skillsBar{
+  width: 10px;
+  height: 320px;
+}
+
+.svgD{
+  margin-top: -10px;
+ 
+}
+
+.descriptionBox{
+  padding: 20px 30px;
+}
+
+.jobsDone{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 20px;
+  padding-left: 40px;
+  grid-row-gap: 50px; 
+}
+.jobsDone .portfolios {
+  width:45vw;
+  overflow: hidden;
+  padding:12px;
+}
+.jobsDone div img{
+  max-width: 100%;
+}
+.second-Prospect button {
+  width: 30%;
+}
+
+.portfolioDescription{
+  padding: 10px 200px;
+}
+
+.certs{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.certificates{
+  width: 90%;
+}
+#modal{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-content: space-around;
+  justify-items: center;
+}
+#modal div{
+  width: 40%;
+}
+
+#modal div h1{
+  margin: 10px 0;
+}
+#modal div:last-child{
+  grid-column: span 2;
+}
+.reviews{
+  width: 80vw;
+}
+.reviewQuote{
+  padding: 10px 80px;
+  
+}
+.footer-body .socials{
+  width: 60%;
+}
