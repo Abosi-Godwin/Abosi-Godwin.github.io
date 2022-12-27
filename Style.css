@@ -12,27 +12,30 @@ body{
   height: 100%;
   background: #fff;
   color: #333;
-  font-family: 'Lato', sans-serif;
-  /*display: flex;*/
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Lato', sans-serif;
+}
 img{
   max-width: 100%;
+}
+body p{
+  padding: 0 10px;
+  font-family: 'Lora', sans-serif;
 }
 
 nav{
   position: fixed;
-  height: 10vh;
   z-index: 10;
   top: 0;
   left: 0;
   background: transparent;
-  padding-bottom: 20px
 }
 .navDiv{
-  height: 60px;
+  height: 10vh;
   position: relative;
   left: 0;
   top: -5px;
@@ -42,7 +45,6 @@ nav{
   flex-direction: row;
   justify-content: space-evenly;
   align-items: justify;
-  padding: 10px;
   z-index: 2;
   transition: all 0.5s ease-in;
 }
@@ -53,10 +55,11 @@ nav{
 .logo img{
   width: 100%;
   height: 100%;
-}
+} 
 .hamburger{
   width: 30%;
-  height: 40px;
+  height: 50px;
+  padding-top: 5px;
 }
 .hamburger .icon{
   width: 60px;
@@ -69,7 +72,7 @@ nav{
   flex-direction: column;
   position: relative;
   right: 5px;
-  top: 0px;
+  top: 3px;
   z-index: 100;
   transition: transform 0.50s linear;
 }
@@ -83,7 +86,6 @@ nav{
 .icon.trans .hamburger2{
   transform: translateX(-35px);
   opacity: 0;
-  /*background: transparent;*/
 }
 .icon.trans .hamburger1{
   transform: rotate(45deg) translate(15px,5px)
@@ -92,7 +94,7 @@ nav{
   transform: rotate(-48deg) translate(15px, -4px);
 }
 
-ul{
+.nav-links{
   width: 80%;
   height: 100vh;
   background: #001040;
@@ -109,26 +111,43 @@ ul{
 ul.open{
   left: 0;
 }
-ul li{
+.nav-links li{
   font-size: 25px;
   color: white;
   width: 100%;
   list-style: none;
 }
-
+.hire{
+  background: #f8a840;
+  width: 50%;
+}
 ul li a{
   color: #fff;
   width: 80%;
-  padding: 20px 0;
+  padding: 10px 0;
   padding-left: 10px;
   text-decoration: none;
   display: block;
   margin: auto;
   text-align: center;
 }
+.nav-links li:last-child{
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.hire{
+  background: #f8a840;
+  width: 50%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
 ul li a:hover{
   background: #000830;
 }
+
+
 header{
   width: 100vw;
   height: 100vh;
@@ -148,7 +167,6 @@ header{
 }
 header div{
   height: 50%;
-  boerder: 2px solid gold;
   display: flex ;
   align-items: center;
   width: 100%;
@@ -162,11 +180,8 @@ header .heading{
   padding: 0 10px;
   margin-bottom: 10px;
 }
-.heading h2{
-  font-size: 22px;
-}
+
 header .btns{
-  
   padding: 60px 10px;
   justify-content: space-around;
 }
@@ -254,27 +269,14 @@ main{
   margin: 0px 0;
   margin-bottom: 20px;
 }
-/*
-************* colors **************
-0000B3
-333333
-141823
-292733
-#F0E8F0
-#E8E8F0
-#C8C8C8
-#D0C8D0
-#707078
 
-*****"*****fonts**************
-
-font-family: 'Lato', sans-serif;
-font-family: 'Lora', serif;
-*/
+#InfoSection .aboutDiv{
+  width: 100%;
+}
 #InfoSection img{
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
   display: block;
   margin: auto;
 }
@@ -291,13 +293,13 @@ font-family: 'Lora', serif;
 #InfoSection h2 span{
   color: #000140;
 }
-#InfoSection p{
+.aboutP{
   font-size: 16px;
   line-height: 1.5;
   font-family: 'Lora', serif;
   padding-top: 50px;
 }
-#InfoSection p:first-letter{
+.aboutP:first-letter{
   font-size: 30px
 }
 .divInfo{
@@ -306,7 +308,6 @@ font-family: 'Lora', serif;
   height: 70px;
   border: 2px solid #efefef;
   border-radius: 10px;
- 
   display: block;
   flex-direction: row;
   align-items: center;
@@ -344,7 +345,6 @@ font-family: 'Lora', serif;
 .achivements{
   width: 100%;
   height: 600px;
-  background: #efefef;
   padding-top: 20px;
   vertical-align: middle;
   padding-bottom: 20px;
@@ -359,13 +359,18 @@ font-family: 'Lora', serif;
   border-radius: 10px;
   position: absolute;
   text-align: center;
+  padding-top: 20px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  justify-content: space-evenly;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  display: flex;
+  justify-content: space-around;
+}
+
+#modal div img{
+  width: 30px;
 }
 #modal div h2{
   font-size: 25px;
@@ -374,15 +379,14 @@ font-family: 'Lora', serif;
 #modal div h3{
   text-transform: uppercase;
   font-size: 16px;
-  font-family: 'Lato', sans-serif; 
+  font-family: 'Lato', sans-serif;
 }
  
 #description{
   width: 100vw;
   height: 100%;
- position: relative;
- padding-top: 80px;
- 
+  position: relative;
+  padding-top: 150px;
 }
 
 #descriptionTitle{
@@ -396,42 +400,53 @@ font-family: 'Lora', serif;
   background-color: #000140;
   margin: 10px auto;
   border-radius: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 #description .WorkTitle{
  text-align: center;
  font-family: "lato" sans-serif;
  font-size: 22px;
- text-transform: uppercase
+ text-transform: uppercase;
+ padding-top: 20px;
+}
+.descriptionBox{
+  padding: 20px 10px;
 }
 .descriptionText{
   font-family: "Lora" serif;
   line-height: 1.5;
   font-size: 16px;
   padding: 20px 10px;
-  padding-bottom: 80px;
-}
-/*
-.learnMoreBtn{
-  width: 100px;
-  height: 50px;
-  background: #000140;
-  color: #fff;
   text-align: center;
-  font-size: 20px;
-  border-radius: 10px;
-  outline: none;
+}
+#description .descInfo p{
+  text-align: center;
+}
+.imageIcon{
+  width: 20%;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+  display: block ;
+  border: 2px solid black;
+  border-radius:50% ;
+}
+
+button a{
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
   display: block;
-  border: none;
-  margin: 20px auto 80px auto;
-  
-} */
+  padding-top: 12px;
+}
+
 .prospect-container{
   position: relative;
 }
 .prospect{
   width: 100vw;
-  height: 150px;
+  height: 180px;
   background: #000140;
   text-align: center;
   display: flex;
@@ -439,38 +454,31 @@ font-family: 'Lora', serif;
   margin-top: -20px;
 }
 .prospect div{
-  display: flex;
-  padding-left: 75px;
   text-align: center;
   height:  90px;
-  flex-direction: row;
-  align-items: center;
+  align-items: center
 } 
-.prospect h1{
-  padding-top: 5px;
-  padding-right: 5px;
+.prospect h3{
   font-size: 2rem;
   color: #fff;
   font-family: "Lora" serif;
   text-align: center;
-  text-transform: uppercase;
   letter-spacing: 5px;
+  text-transform: capitalize;
 }
-.prospect div span{
+.prospect div h3 span{
   text-decoration: italic;
   padding-top: 2px;
   font-size: 25px;
-  color: #fff;
   font-family: "Lora" serif;
   text-align: center;
-  text-transform: uppercase;
   letter-spacing: 5px;
-  brder: 2px solid purple;
+  display: block;
+  height: 30px;
+  width: auto;
+  color:#f8a840;
 }
-.spanned{
-  text-align: left;
-  float: left;
-}
+
 .prospect button {
   width: 80%;
   height: 50px;
@@ -483,13 +491,159 @@ font-family: 'Lora', serif;
   border: 2px solid white;
   outline: none;
   text-transform: uppercase;
+  border-radius:  10px;
+}
+.prospect button a{
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding-top: 12px;
+}
+.second-Prospect{
+  width: 100vw;
+  height: 180px;
+  background: #000140;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: -20px;
+}
+.second-Prospect button {
+  width: 80%;
+  height: 50px;
+  background: #f8a840;
+  font-size: 20px;
+  font-weight: 800;
+  display: block;
+  margin: auto;
+  border: 2px solid white;
+  outline: none;
+  text-transform: uppercase;
+  border-radius:  10px;
+ 
+}
+.second-Prospect .consult a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.mySkills{
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.designing{
+  display: flex;
+  flex-direction: row;
+  padding: 5px 10px;
+  width: 100vw;
+}
+.marketing{
+  display: flex;
+  flex-direction: row;
+  padding: 5px 10px;
+  width: 100vw;
+  margin-top: 20px;
+}
+.skillsBar{
+  width: 5px;
+  height: 280px;
+  background: #f8a840;
   border-radius: 10px;
 }
+.skillsBar.b{
+  background: #000140;
+}
+.deSkills{
+  padding: 0px 10px;
+  width: calc(100vw - 5px);
+}
+.maSkills{
+  
+  padding: 0px 10px;
+  width: calc(100vw - 5px);
+}
+.loaders{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.barDiv{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.barSkill{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.progressBar{
+  width: 100%;
+  background: #000140;
+  height: 10px;
+  margin-top: 5px;
+  border-radius: 10px;
+  background: linen;
+}
+
+.bar{
+  width: 99%;
+  background: #000140;
+  height: 10px;
+  border-radius: 10px;
+
+}
+.progressBar.ssd .bar{
+  width: 99%;
+}
+.progressBar.lpd .bar{
+  width: 90%;
+}
+.progressBar.fd .bar{
+  width: 96%;
+}
+.progressBar.ld .bar{
+  width: 80%;
+}
+.progressBar.etd .bar{
+  width: 95%;
+}
+.progressBar.uxd .bar{
+  width: 92%;
+}
+.marketing  .bar{
+  width: 99%;
+  background: #f8a840;
+  height: 10px;
+  border-radius: 10px;
+
+}
+.progressBar.cro .bar{
+  width: 99%;
+}
+.progressBar.seo .bar{
+  width: 95%;
+}
+.progressBar.smm .bar{
+  width: 90%;
+}
+.progressBar.pa .bar{
+  width: 88%;
+}
+.progressBar.c .bar{
+  width: 92%;
+}
+.progressBar.im .bar{
+  width: 95%;
+}
+
 
 #portfolio{
   width: 100vw;
   height: 100%;
-  padding-top: 80px;
+  padding-top: 50px;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 15px;
@@ -507,12 +661,13 @@ font-family: 'Lora', serif;
   font-family: "lora" serif;
 }
 .portfolios{
-  padding-top: 80px;
+  padding-top: 50px;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  color: green;
 }
 .portfolios p{
   text-align: center;
@@ -521,12 +676,32 @@ font-family: 'Lora', serif;
   font-size: 16px;
   font-family: "lora" serif;
 }
+.project-title{
+  margin: 10px;
+}
 .portfolios img{
   width: 90vw;
-  height: 200px;
+  height: auto;
   display: block;
   border-radius: 10px;
 }
+.skills-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-list li {
+  background-color: lightgray;
+  border-radius: 4px;
+  margin: 4px;
+  padding: 4px 8px;
+}
+
 .portfolios div{
   width: 100%;
   display: flex;
@@ -536,7 +711,7 @@ font-family: 'Lora', serif;
 .portfolios div button{
   width: 150px;
   height: 50px;
-
+  background: #000140;
   color: #000140;
   font-size: 20px;
   font-weight: 500;
@@ -547,8 +722,31 @@ font-family: 'Lora', serif;
   text-transform: uppercase;
   border-radius: 10px;
 }
+.all-p{
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  grid-column: span 2;
+}
+.all-p button {
+  background: #f8a840;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  border: 2px solid white;
+  outline: none;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 10px;
+  margin: auto;
+}
+.all-p button a {
+  padding-bottom: 10px;
+}
 .reviews{
-  width: 80vw;
+  width: 90vw;
   height: 100%;
   display: flex;
   align-items: center;
@@ -560,6 +758,8 @@ font-family: 'Lora', serif;
   margin: 20px auto;
   border-radius: 8px;
   background: #fff;
+  color: #fff;
+  background: #f8a840;
   box-shadow: 0px 0px 5px grey;
 }
 .reviews h1{
@@ -576,27 +776,19 @@ font-family: 'Lora', serif;
   margin-bottom: 20px;
   border-radius: 20px;
 }
-.reviews img{
-  width: 200px;
-  height: 200px;
-  display: block;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
+
 .reviews h2{
    text-transform: uppercase;
    margin: 2px auto;
 }
 .job{
   color: #000140;
-  font-size: 20px;
+  font-size: 0.9em;
 }
 blockquote{
   text-align: center;
-  font-size: 16px;
+  font-size: 1em;
   font-family: "lora" serif;
-  padding: 10px;
-  line-height: 1.2;
 }
 
 blockquote::before{
@@ -604,14 +796,16 @@ blockquote::before{
   font-weight: 900;
   content: "\f10d";
   font-size: 25px;
-  margin-right: 5px;
+  margin-right: 10px;
+  color: #000140;
 }
 blockquote::after{
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f10e";
   font-size: 25px;
-  margin-left: 5px;
+  margin-left: 10px;
+  color: #000140;
 }
 
 .reviewBtns{
@@ -648,162 +842,13 @@ blockquote::after{
   padding: 5px;
   border-radius: 10px;
 }
-.team{
-  width: 100vw;
-  height: 100%;
-  padding-top: 50px;
-}
-.team .teamTitle{
-  text-align: center;
-  font-size: 25px;
-  font-family: "Lato" sans-serif;
-  text-transform: uppercase;
-}
-.team p {
-  padding-top: 10px;
-  font-size: 18px;
-  line-height: 1.5;
-  text-align: center;
-  font-family: "lora" serif;
-  text-transform: capitalize;
-}
-.team-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 30px;
-  position: relative;
-  justify-content: space-around;
-  margin: 50px 0;
-}
 
-.teamImg{
-  width: 90%;
-  border-radius: 20px;
-  height: 250px;
-}
-.details{ 
-  width: 100vw;
-  float: left;
-  text-transform: uppercase;
-  padding-left: 20px;
-  padding-top: 10px;
-  margin-bottom: 10px;
-}
-.details h3{
-  font-family: "lato" sans-serif;
-  margin: 5px 0;
-}
-.team-container > button{
-  width: 200px;
-  height: 50px;
-  background: #fff;
-  color: #333;
-  font-size: 20px;
-  font-weight: 800;
-  display: block;
-  border: 2px solid #000;
-  outline: none;
-  text-transform: uppercase;
-  padding: 5px;
-  border-radius: 10px;
-}
-
-.more-info{
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top:0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  z-index: 10000;
-  cursor: none;
-  backdrop-filter: blur(8px);
-  display: none;
-  transition: all 2s linear;
-}
-
-.more-info .infos{
-  width: 80%;
-  height: 60%;
-  background: #fff;
-  position: absolute;
-  top: 50%;
-  border-radius: 20px;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
-.infos p{
-  height: 60%;
-  text-align: left;
-  font-size: 16px;
-  vertical-align: middle;
-  padding: 10px;
-}
-.infos .buttons{
-  height: 30%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.infos .buttons button a{
-  color: #333;
-  text-decoration: none;
-}
-.buttons button a:link {
-  color: black;
-}
-.visit{
-  outline: none;
-  text-transform: uppercase;
-  border-radius: 10px;
-  border: none;
-  border: 2px solid #000140;
-}
-.visit a{
-  width: 200px;
-  height: 50px;
-  background: #fff;
-  color: #000140;
-  font-size: 20px;
-  font-weight: 800;
-  display: block;
-  text-transform: uppercase;
-  padding: 5px;
-  border-radius: 10px;
-  padding-top: 15px;
-}
-.cancel{
-  width: 200px;
-  height: 50px;
-  background: red!important;
-  color: #fff!important;
-  font-size: 20px;
-  font-weight: 800;
-  display: block;
-  border: 0px solid white;
-  outline: none;
-  text-transform: uppercase;
-  padding: 5px;
-  border-radius: 10px;
-}
-.icon{
-  width: 30px;
-  height: 30px;
-}
-#Blogs{
+#certSection{
   width: 100%;
   background: #efefef;
   padding-top: 50px
 }
-#Blogs h2{
+#certSection h2{
   text-transform: uppercase;
   padding:  15px 15px;
   font-family: 'Lato', sans-serif;
@@ -811,66 +856,15 @@ blockquote::after{
   text-align: center;
 }
 
-
-#Blogs .blog{
+.certificates{
   width: 90vw;
-  height: 95vh;
+  height: auto;
   border-radius: 5px;
   margin: 20px auto;
-  background-color: #fff!important;
+  background-color:#fff!important;
   box-shadow: 1px 1px 5px rgba(0, 0,0,0.2);
-  padding: 15px;
+  padding: 10px;
   overflow: hidden;
-}
-.blog h1{
-  /*font-family: Georgia, 'Times New Roman', Times, serif;*/
-  color: #333;
-  padding-top: 15px;
-  padding-bottom: 10px;
-  font-family: 'Lato', sans-serif;
-  font-size: 1.5em;
-}
-.blog p{
-  line-height: 1.5;
-  font-family: 'Lora', serif;
-  
-}
-.blog img{
-  width: 100%;
-}
-.blog .about-blog{
-  display: flex;
-  align-items: center;
-  padding-top: 5px;
-  justify-content: space-around;
-}
-.blog .about-blog i{
-  display: inline-block;
-  color: #000140;
-  font-size: 18px;
-}
-.fa-user::after{
-  content: " By Godwin";
-}
-.fa-comment:after{
-  content: " 5 comments";
-}
-.blog button{
-  width: 100px;
-  font-family: "lato" , sans-serif;
-  height: 50px;
-  border: none;
-  margin: auto;
-  margin-top: 10px;
-  border-radius: 5px;
-  display: block;
-  color: #000140;
-  font-size: 1.2em;
-  outline: none;
-  text-align: center;
-  padding: 5px;
-  float: left;
-  font-weight: 600;
 }
  main {
   flex: 1 0 auto;
@@ -882,101 +876,32 @@ blockquote::after{
   padding: 25px 5px;
  padding-top: 50px;
   
-}u
+}
 #contacts h1{
   text-align: center;
   text-transform: uppercase;
   font-family: "lato" sans-serif;
   padding-top: 10px;
   margin-bottom: 30px;
-}
-.contact-icons{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.contact-icons div{
-  width: 100%;
-  height: 30px;
-  margin: 10px 0;
-}
-.contact-icons div i{
-  width: 40px;
-  height: 40px;
-  background: #000140;
-  font-size: 30px;
-  border-radius: 100%;
-  text-align: center;
-  padding-top: 8px;
-  color: #fff;
-  display: inline-block;
-  margin: auto;
-  margin-right: 8px;
-}
-.contact-icons div a{
+} 
+
+#contacts a{
+  display: block;
+  width: 50%;
   text-decoration: none;
-  font-size: 18px;
-  color: #000;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.contact-icons div p{
-  display: inline-block;
-  font-size: 18px;
-  color: #333;
-  width: 250px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-form{
-  padding-top: 30px;
-}
-#contacts input{
-  width: 99%; 
-  height: 50px;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  font-weight: 600;
-  color: #000140;
-  padding: 10px;
-  padding-left: 5;
-  border: 1px solid #000140;
+  background: #f8a840;
+  color: #fff;
+  font-weight: 800;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   border-radius: 10px;
-  margin: 10px auto;
-  display: block;
-}
-textarea{
-  display: block;
+  font-size: 2rem;
+  text-transform: uppercase;
   margin: auto;
-  color: #000140;
-  outline: none;
-  border: none;
-  border: 1px solid #000140;
-  border-radius: 10px;
-  padding: 10px;
-  font-size: 18px;
-  resize: none;
-  font-weight: 600;
+  padding: 10px 0;
 }
-#send{
-  width: 50%!important;
-  background: #000140;
-  margin: 40px auto!important;
-  border-radius: 10px;
-  font-size: 25px!important;
-  font-weight: 600;
-  display: block;
-  text-transform: uppercase;
-  color: #fff!important;
-  letter-spacing: 10px;
-}
-#contacts ::-webkit-input-placeholder{
- font-size: 18px;
- font-weight: 400;
- padding-left: 5px;
-}
+
 
 footer{
   width: 100vw;
@@ -994,10 +919,11 @@ footer{
 
 .footer-copyright {
   width: 100%;
-  height: 40px;
+  height: 70px;
   padding: 20px;
   text-align: center;
   padding-bottom: 10px;
+  text-transform: capitalize;
 }
 
 .footer-body > div {
@@ -1022,7 +948,7 @@ footer{
   height: 80px;
   background: #fff;
   border-radius: 10px;
-  margin: 0 0px;
+
 }
 .footer-body p{
   text-align: left;
@@ -1033,19 +959,27 @@ footer{
 .footer-body .socials{
   width: 80%;
   margin: 20px auto!important;
-  display: block;
   background: #000830;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+}
+.socials a{
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  width: 30%;
+  text-align: center;
 }
 .socials i {
-  width: 50px;
   text-align: center;
   font-weight: 700;
   font-size: 22px;
+  display: inline-block;
+  padding: 10px;
 }
+
 .image{
   opacity: 0;
   transition: all 0.5s ease-in;
@@ -1056,11 +990,53 @@ footer{
   transform: translateY(-20px);
   margin-bottom: 0px
 }
-.change-background{
-  transition: all 1s linear;
-  background-color: red;
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  z-index: 9999;
 }
-.spanned{
-  border-radius: 2px;
-  border-right: 2px solid #ffffff;
+
+.preloader-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.preloader-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #f8a840;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+.preloader-text {
+  font-size: 20px;
+  color: #000140;
+ font-weight: bolder;
+  margin-top: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.color{
+  background-color: #000140;
+  transition: background 0.3s linear;
+}
+
+a:hover{
+  cursor: pointer;
 }
