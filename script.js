@@ -242,7 +242,9 @@ let textToType = JSON.parse(textElement.getAttribute("data-words"));
 
 new Typewriter(textElement, typeDelay, textToType)
 }
+/*
 window.addEventListener("load", function() {
   const preloader = document.getElementById("preloader");
   preloader.style.display = "none";
 });
+*/
