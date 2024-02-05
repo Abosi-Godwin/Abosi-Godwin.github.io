@@ -934,7 +934,7 @@ button a {
 
 .reviewsContainer {
   display: flex;
-  overflo3w: hidden;
+  overflow: hidden;
   position: relative;
   width: 100%;
   height: 200px;
