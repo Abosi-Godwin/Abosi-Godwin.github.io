@@ -178,7 +178,7 @@ ul li a:hover {
 header {
   width: 100vw;
   height: 100vh;
-  background: url(Shopify-store-design2.svg), #666;
+  background: url("/src/images/banner/Shopify-store-design2.svg"), #666;
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
