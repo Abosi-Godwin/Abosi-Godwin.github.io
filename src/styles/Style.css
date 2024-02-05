@@ -1,15 +1,15 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/*
-html{
+html {
   -webkit-scroll-behavior: smooth;
   scroll-behavior: smooth;
 }
-body{
+
+body {
   width: 100vw;
   height: 100%;
   background: #fff;
@@ -19,25 +19,34 @@ body{
   align-items: center;
   font-size: 14px;
 }
-h1,h2,h3,h4,h5,h6{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Lato', sans-serif;
 }
-img{
+
+img {
   max-width: 100%;
 }
-body p{
+
+body p {
   padding: 0 10px;
   font-family: 'Lora', sans-serif;
 }
 
-nav{
+nav {
   position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
   background: transparent;
 }
-.navDiv{
+
+.navDiv {
   height: 10vh;
   position: relative;
   left: 0;
@@ -51,20 +60,24 @@ nav{
   z-index: 2;
   transition: all 0.5s ease-in;
 }
-.logo{
+
+.logo {
   width: 60%;
   height: 100%;
 }
-.logo img{
+
+.logo img {
   width: 100%;
   height: 100%;
-} 
-.hamburger{
+}
+
+.hamburger {
   width: 30%;
   height: 50px;
   padding-top: 5px;
 }
-.hamburger .icon{
+
+.hamburger .icon {
   width: 60px;
   height: 100%;
   display: flex;
@@ -79,25 +92,29 @@ nav{
   z-index: 100;
   transition: transform 0.50s linear;
 }
-.icon div{
+
+.icon div {
   width: 50px;
   height: 5px;
   background: white;
   border-radius: 5px;
   transition: all 0.5s linear;
 }
-.icon.trans .hamburger2{
+
+.icon.trans .hamburger2 {
   transform: translateX(-35px);
   opacity: 0;
 }
-.icon.trans .hamburger1{
-  transform: rotate(45deg) translate(15px,5px)
+
+.icon.trans .hamburger1 {
+  transform: rotate(45deg) translate(15px, 5px)
 }
-.icon.trans .hamburger3{
+
+.icon.trans .hamburger3 {
   transform: rotate(-48deg) translate(15px, -4px);
 }
 
-.nav-links{
+.nav-links {
   width: 80%;
   height: 100vh;
   background: #001040;
@@ -111,20 +128,24 @@ nav{
   justify-content: space-evenly;
   transition: left 0.50s linear;
 }
-ul.open{
+
+.nav-links.open {
   left: 0;
 }
-.nav-links li{
+
+.nav-links li {
   font-size: 25px;
   color: white;
   width: 100%;
   list-style: none;
 }
-.hire{
+
+.hire {
   background: #f8a840;
   width: 50%;
 }
-ul li a{
+
+ul li a {
   color: #fff;
   width: 80%;
   padding: 10px 0;
@@ -134,27 +155,30 @@ ul li a{
   margin: auto;
   text-align: center;
 }
-.nav-links li:last-child{
+
+.nav-links li:last-child {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
-.hire{
+
+.hire {
   background: #f8a840;
   width: 50%;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
-ul li a:hover{
+
+ul li a:hover {
   background: #000830;
 }
 
 
-header{
+header {
   width: 100vw;
   height: 100vh;
-  background: url(Shopify-store-design2.svg),#666;
+  background: url(Shopify-store-design2.svg), #666;
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
@@ -165,44 +189,100 @@ header{
   position: relative;
   flex-direction: column;
   text-align: center;
-  
+
   justify-content: space-around;
 }
-header div{
+
+header div {
   height: 50%;
-  display: flex ;
+  display: flex;
   align-items: center;
   width: 100%;
   flex-direction: column;
 }
-header .heading{
+
+header .heading {
   justify-content: flex-end;
 }
-.heading h1{
+
+.heading h1 {
   font-size: 24px;
   padding: 0 10px;
   margin-bottom: 10px;
 }
 
-header .btns{
+header .btns {
   padding: 60px 10px;
   justify-content: space-around;
 }
-main{
+
+main {
   display: flex;
- flex-direction: column; 
- justify-content: space-around;
- align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
 }
-.Line{
+
+.ctr {
+  position: fixed;
+  top: 50vh;
+  right: 0;
+  width: auto;
+  display: flex;
+  align-items: center;
+  z-index: 500;
+}
+
+.ctr button {
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  background: #f8a840;
+  color: #ffffff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  text-align: center;
+  margin-right: -5px;
+  z-index: 3;
+}
+
+.ctr .ctr-info {
+  background: #000140;
+  padding: 15px 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: #fff;
+  display: none;
+}
+
+.ctr .ctr-info a {
+  color: #f8a840;
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.ctr-info.opened-ctr {
+  transition: width 2s .5s ease-in-out;
+  display: block;
+}
+
+.Line {
   width: 50px;
   height: 8px;
   background-color: #000140;
   margin: 10px auto;
   border-radius: 20px;
 }
-.hireBtn{
-  width:   60%;
+
+.hireBtn {
+  width: 60%;
   height: 50px;
   background: #001040;
   color: #fff;
@@ -221,50 +301,57 @@ main{
   padding: 10px;
   animation: hireBtn 1s ease-out 1s forwards;
 }
-@keyframes hireBtn{
-  from{
+
+@keyframes hireBtn {
+  from {
     opacity: 0;
     transform: translateY(-50px);
   }
-  to{
+
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-.hireBtn:hover{
+
+.hireBtn:hover {
   background: #fff;
   color: #001040;
   border: 2px solid #001040;
 }
+
 .hireNow {
-  
+
   background: #f8a840;
 }
-.slide{
+
+.slide {
   width: 0px;
   height: 0px;
   border-style: solid;
   border-width: 0px 20px 20px 0px;
   border-color: transparent transparent #fff transparent;
- transform: rotate(-45deg);
- margin-bottom: -10px;
- opacity: 0;
- animation: scroll 2s ease-in-out 1s infinite;
- position: absolute;
- bottom:0;
+  transform: rotate(-45deg);
+  margin-bottom: -10px;
+  opacity: 0;
+  animation: scroll 2s ease-in-out 1s infinite;
+  position: absolute;
+  bottom: 0;
 }
+
 @keyframes scroll {
-  from{
+  from {
     margin-bottom: 30px;
     opacity: 0;
   }
-  to{
+
+  to {
     margin-bottom: 10px;
     opacity: 1;
   }
 }
 
-#InfoSection{
+#InfoSection {
   width: 100vw;
   padding: 15px;
   padding-top: 65px;
@@ -273,18 +360,20 @@ main{
   margin-bottom: 20px;
 }
 
-#InfoSection .aboutDiv{
+#InfoSection .aboutDiv {
   width: 100%;
   margin-bottom: 20px;
 }
-#InfoSection img{
+
+#InfoSection img {
   width: 100%;
   height: auto;
   border-radius: 5%;
   display: block;
   margin: auto;
 }
-#InfoSection h2{
+
+#InfoSection h2 {
   color: #707078;
   text-transform: uppercase;
   letter-spacing: 5px;
@@ -294,18 +383,21 @@ main{
   font-weight: 800;
 }
 
-#InfoSection h2 span{
+#InfoSection h2 span {
   color: #000140;
 }
-.aboutP{
+
+.aboutP {
   font-size: 16px;
   font-family: 'Lora', serif;
   padding-top: 50px;
 }
-.aboutP:first-letter{
+
+.aboutP:first-letter {
   font-size: 30px
 }
-.divInfo{
+
+.divInfo {
   width: 100%;
   margin: 20px 0px;
   height: 70px;
@@ -318,26 +410,31 @@ main{
   justify-content: space-between;
   overflow: hidden
 }
-.divInfo div{
+
+.divInfo div {
   width: 25%;
   background: #fff;
   height: 100%;
 }
-.divInfo h3{
+
+.divInfo h3 {
   width: 75%;
   text-align: center;
   font-size: 15px;
   color: #333;
 }
-.icon-check{
+
+.icon-check {
   align-items: center;
   justify-content: center;
   display: flex;
 }
-.divInfo .icon-check i{
+
+.divInfo .icon-check i {
   font-size: 28px;
 }
-#InfoSection .slogan{
+
+#InfoSection .slogan {
   color: #333;
   text-align: center;
   text-transform: uppercase;
@@ -345,7 +442,7 @@ main{
   font-size: 20px;
 }
 
-.achivements{
+.achivements {
   width: 100%;
   height: 600px;
   padding-top: 20px;
@@ -354,7 +451,8 @@ main{
   position: relative;
   background-color: #efefef;
 }
-#modal{
+
+#modal {
   width: 80%;
   background: #fff;
   height: 90%;
@@ -372,32 +470,35 @@ main{
   justify-content: space-around;
 }
 
-#modal div img{
+#modal div img {
   width: 30px;
 }
-#modal div h2{
+
+#modal div h2 {
   font-size: 25px;
   margin: 5px 0;
 }
-#modal div h3{
+
+#modal div h3 {
   text-transform: uppercase;
   font-size: 16px;
   font-family: 'Lato', sans-serif;
 }
- 
-#description{
+
+#description {
   width: 100vw;
   height: 100%;
   position: relative;
   padding-top: 50px;
 }
 
-#descriptionTitle{
+#descriptionTitle {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 20px;
-} 
-.descriptionLine{
+}
+
+.descriptionLine {
   width: 50px;
   height: 8px;
   background-color: #000140;
@@ -405,36 +506,41 @@ main{
   border-radius: 20px;
   margin-bottom: 10px;
 }
-#description .WorkTitle{
- text-align: center;
- font-family: "lato" sans-serif;
- font-size: 22px;
- text-transform: uppercase;
- padding-top: 20px;
+
+#description .WorkTitle {
+  text-align: center;
+  font-family: "lato" sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  padding-top: 20px;
 }
-.descriptionBox{
+
+.descriptionBox {
   padding: 20px 10px;
 }
-.descriptionText{
+
+.descriptionText {
   font-family: "Lora" serif;
   font-size: 16px;
   padding: 20px 10px;
   text-align: center;
 }
-#description .descInfo p{
+
+#description .descInfo p {
   text-align: center;
 }
-.imageIcon{
+
+.imageIcon {
   width: 20%;
   height: auto;
   text-align: center;
   margin: 0 auto;
-  display: block ;
+  display: block;
   border: 2px solid black;
-  border-radius:50% ;
+  border-radius: 50%;
 }
 
-button a{
+button a {
   color: #fff;
   text-decoration: none;
   width: 100%;
@@ -443,10 +549,11 @@ button a{
   padding-top: 12px;
 }
 
-.prospect-container{
+.prospect-container {
   position: relative;
 }
-.prospect{
+
+.prospect {
   width: 100vw;
   height: 180px;
   background: #000140;
@@ -455,12 +562,14 @@ button a{
   flex-direction: column;
   margin-top: -20px;
 }
-.prospect div{
+
+.prospect div {
   text-align: center;
-  height:  90px;
+  height: 90px;
   align-items: center
-} 
-.prospect h3{
+}
+
+.prospect h3 {
   font-size: 2rem;
   color: #fff;
   font-family: "Lora" serif;
@@ -468,7 +577,8 @@ button a{
   letter-spacing: 5px;
   text-transform: capitalize;
 }
-.prospect div h3 span{
+
+.prospect div h3 span {
   text-decoration: italic;
   padding-top: 2px;
   font-size: 25px;
@@ -478,7 +588,7 @@ button a{
   display: block;
   height: 30px;
   width: auto;
-  color:#f8a840;
+  color: #f8a840;
 }
 
 .prospect button {
@@ -493,9 +603,10 @@ button a{
   border: 2px solid white;
   outline: none;
   text-transform: uppercase;
-  border-radius:  10px;
+  border-radius: 10px;
 }
-.prospect button a{
+
+.prospect button a {
   color: #fff;
   text-decoration: none;
   width: 100%;
@@ -503,7 +614,8 @@ button a{
   display: block;
   padding-top: 12px;
 }
-.second-Prospect{
+
+.second-Prospect {
   width: 100vw;
   height: 180px;
   background: #000140;
@@ -512,6 +624,7 @@ button a{
   flex-direction: column;
   margin-top: -20px;
 }
+
 .second-Prospect button {
   width: 80%;
   height: 50px;
@@ -523,65 +636,79 @@ button a{
   border: 2px solid white;
   outline: none;
   text-transform: uppercase;
-  border-radius:  10px;
- 
+  border-radius: 10px;
+
 }
-.second-Prospect .consult a{
+
+.second-Prospect .consult a {
   text-decoration: none;
   color: #ffffff;
 }
+.skills{
+  overflow: hidden;
+}
 
-.mySkills{
+.mySkills {
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
 }
-.designing{
+
+.designing {
   display: flex;
   flex-direction: row;
   padding: 5px 10px;
   width: 100vw;
 }
-.marketing{
+
+.marketing {
   display: flex;
   flex-direction: row;
   padding: 5px 10px;
   width: 100vw;
   margin-top: 20px;
 }
-.skillsBar{
+
+.skillsBar {
   width: 5px;
   height: 280px;
   background: #f8a840;
   border-radius: 10px;
 }
-.skillsBar.b{
+
+.skillsBar.b {
   background: #000140;
 }
-.deSkills{
+
+.deSkills {
   padding: 0px 10px;
   width: calc(100vw - 5px);
 }
-.maSkills{
-  
+
+.maSkills {
+
   padding: 0px 10px;
   width: calc(100vw - 5px);
 }
-.loaders{
+
+.loaders {
   display: grid;
   grid-template-columns: 1fr;
 }
-.barDiv{
+
+.barDiv {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
 }
-.barSkill{
+
+.barSkill {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-.progressBar{
+
+.progressBar {
   width: 100%;
   background: #000140;
   height: 10px;
@@ -590,59 +717,72 @@ button a{
   background: linen;
 }
 
-.bar{
+.bar {
   width: 99%;
   background: #000140;
   height: 10px;
   border-radius: 10px;
 
 }
-.progressBar.ssd .bar{
+
+.progressBar.ssd .bar {
   width: 99%;
 }
-.progressBar.lpd .bar{
+
+.progressBar.lpd .bar {
   width: 90%;
 }
-.progressBar.fd .bar{
+
+.progressBar.fd .bar {
   width: 96%;
 }
-.progressBar.ld .bar{
+
+.progressBar.ld .bar {
   width: 80%;
 }
-.progressBar.etd .bar{
+
+.progressBar.etd .bar {
   width: 95%;
 }
-.progressBar.uxd .bar{
+
+.progressBar.uxd .bar {
   width: 92%;
 }
-.marketing  .bar{
+
+.marketing .bar {
   width: 99%;
   background: #f8a840;
   height: 10px;
   border-radius: 10px;
 
 }
-.progressBar.cro .bar{
+
+.progressBar.cro .bar {
   width: 99%;
 }
-.progressBar.seo .bar{
+
+.progressBar.seo .bar {
   width: 95%;
 }
-.progressBar.smm .bar{
+
+.progressBar.smm .bar {
   width: 90%;
 }
-.progressBar.pa .bar{
+
+.progressBar.pa .bar {
   width: 88%;
 }
-.progressBar.c .bar{
+
+.progressBar.c .bar {
   width: 92%;
 }
-.progressBar.im .bar{
+
+.progressBar.im .bar {
   width: 95%;
 }
 
 
-#portfolio{
+#portfolio {
   width: 100vw;
   height: 100%;
   padding-top: 50px;
@@ -650,19 +790,22 @@ button a{
   background-size: cover;
   padding-bottom: 15px;
 }
-.portfolioTitle{
+
+.portfolioTitle {
   color: #333;
   text-align: center;
   text-transform: uppercase;
   font-family: "lato" sans-serif;
 }
-.portfolioDescription{
+
+.portfolioDescription {
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
   font-family: "lora" serif;
 }
-.portfolios{
+
+.portfolios {
   padding-top: 50px;
   width: 100vw;
   display: flex;
@@ -670,21 +813,25 @@ button a{
   justify-content: space-evenly;
   align-items: center;
 }
-.portfolios p{
+
+.portfolios p {
   text-align: center;
   line-height: 1.5;
   padding-top: 20px;
   font-family: "lora" serif;
 }
-.project-title{
+
+.project-title {
   margin: 10px;
 }
-.portfolios img{
+
+.portfolios img {
   width: 90vw;
   height: auto;
   display: block;
   border-radius: 10px;
 }
+
 .skills-list ul {
   display: flex;
   flex-wrap: wrap;
@@ -703,13 +850,14 @@ button a{
   font-style: italic;
 }
 
-.portfolios div{
+.portfolios div {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.portfolios div button{
+
+.portfolios div button {
   width: 150px;
   height: 50px;
   background: #000140;
@@ -723,7 +871,10 @@ button a{
   text-transform: uppercase;
   border-radius: 10px;
 }
-.all-p{
+
+
+
+.all-p {
   padding: 30px;
   display: flex;
   justify-content: center;
@@ -731,6 +882,7 @@ button a{
   margin-bottom: 20px;
   grid-column: span 2;
 }
+
 .all-p button {
   background: #f8a840;
   color: #fff;
@@ -743,10 +895,12 @@ button a{
   border-radius: 10px;
   margin: auto;
 }
+
 .all-p button a {
   padding-bottom: 10px;
 }
-.reviews{
+
+.reviews {
   width: 90vw;
   height: 100%;
   display: flex;
@@ -754,8 +908,6 @@ button a{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px;
-  position: relative; 
   margin: 20px auto;
   border-radius: 8px;
   background: #fff;
@@ -763,13 +915,15 @@ button a{
   background: #f8a840;
   box-shadow: 0px 0px 5px grey;
 }
-.reviews h1{
+
+.reviews h1 {
   text-align: center;
   text-transform: uppercase;
   font-family: "lato" sans-serif;
   margin-bottom: 0px;
 }
-.reviewLine{
+
+.reviewLine {
   width: 50px;
   height: 8px;
   background-color: #000140;
@@ -778,21 +932,44 @@ button a{
   border-radius: 20px;
 }
 
-.reviews h2{
-   text-transform: uppercase;
-   margin: 2px auto;
+.reviewsContainer {
+  display: flex;
+  overflo3w: hidden;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
 }
-.job{
-  color: #000140;
+
+.reviewsContainer .review {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  color: #fff;
+  padding: 0.3rem;
+  background: #000140;
+  transition: all 1s;
+}
+
+
+.reviews h2 {
+  text-transform: uppercase;
+  margin: 2px auto;
+}
+
+.job {
+  color: #f8a840;
   font-size: 0.9em;
 }
-blockquote{
+
+blockquote {
   text-align: center;
   font-size: 1em;
   font-family: "lora" serif;
 }
 
-blockquote::before{
+blockquote::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f10d";
@@ -800,7 +977,8 @@ blockquote::before{
   margin-right: 10px;
   color: #000140;
 }
-blockquote::after{
+
+blockquote::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f10e";
@@ -809,7 +987,7 @@ blockquote::after{
   color: #000140;
 }
 
-.reviewBtns{
+.reviewBtns {
   display: flex;
   width: 80%;
   margin: 10px auto;
@@ -817,7 +995,8 @@ blockquote::after{
   height: 50px;
   justify-content: space-around;
 }
-.reviewBtns .fas{
+
+.reviewBtns .fas {
   background: #000140;
   width: 30px;
   color: #fff;
@@ -827,9 +1006,10 @@ blockquote::after{
   vertical-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-radius:50% ;
+  border-radius: 50%;
 }
-.reviews button{
+
+.reviews button {
   width: 100px;
   height: 100px;
   background: #001040;
@@ -844,49 +1024,54 @@ blockquote::after{
   border-radius: 10px;
 }
 
-#certSection{
+#certSection {
   width: 100%;
   background: #efefef;
-  padding-top: 50px
+  padding-top: 50px;
+  overflow: hidden;
 }
-#certSection h2{
+
+#certSection h2 {
   text-transform: uppercase;
-  padding:  15px 15px;
+  padding: 15px 15px;
   font-family: 'Lato', sans-serif;
   font-size: 30px;
   text-align: center;
 }
 
-.certificates{
+.certificates {
   width: 90vw;
   height: auto;
   border-radius: 5px;
   margin: 20px auto;
-  background-color:#fff!important;
-  box-shadow: 1px 1px 5px rgba(0, 0,0,0.2);
+  background-color: #fff !important;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   padding: 10px;
   overflow: hidden;
 }
- main {
+
+main {
   flex: 1 0 auto;
   height: 100%;
- }
-#contacts{
+}
+
+#contacts {
   background: #ffffff;
   width: 100vw;
   padding: 25px 5px;
- padding-top: 50px;
-  
+  padding-top: 50px;
+
 }
-#contacts h1{
+
+#contacts h1 {
   text-align: center;
   text-transform: uppercase;
   font-family: "lato" sans-serif;
   padding-top: 10px;
   margin-bottom: 30px;
-} 
+}
 
-#contacts a{
+#contacts a {
   display: block;
   width: 50%;
   text-decoration: none;
@@ -904,9 +1089,9 @@ blockquote::after{
 }
 
 
-footer{
+footer {
   width: 100vw;
-  background-color:#000140;
+  background-color: #000140;
   color: #fff;
   position: relative;
   display: flex;
@@ -927,7 +1112,7 @@ footer{
   text-transform: capitalize;
 }
 
-.footer-body > div {
+.footer-body>div {
   padding: 20px;
 }
 
@@ -939,40 +1124,46 @@ footer{
   align-items: center;
   justify-content: space-between;
 }
-.footer-body .f-div img{
+
+.footer-body .f-div img {
   float: left;
   padding-right: 20px;
   width: 50%;
 }
-.f-div div{
+
+.f-div div {
   width: 2px;
   height: 80px;
   background: #fff;
   border-radius: 10px;
 
 }
-.footer-body p{
+
+.footer-body p {
   text-align: left;
   font-size: 15px;
   padding: 12px 0 0 10px;
   width: 50%;
 }
-.footer-body .socials{
+
+.footer-body .socials {
   width: 80%;
-  margin: 20px auto!important;
+  margin: 20px auto !important;
   background: #000830;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-.socials a{
+
+.socials a {
   color: #fff;
   display: block;
   text-decoration: none;
   width: 30%;
   text-align: center;
 }
+
 .socials i {
   text-align: center;
   font-weight: 700;
@@ -980,17 +1171,39 @@ footer{
   display: inline-block;
   padding: 10px;
 }
+.jobsDone{
+  overflow: hidden;
+}
 
-.image{
+.image {
   opacity: 0;
   transition: all 0.5s ease-in;
-  transform: translateY(40px);
+  transform: translateY(50px);
 }
-.show-work-image{
+
+.show-work-image {
   opacity: 1;
-  transform: translateY(-20px);
-  margin-bottom: 0px
+  transform: translateY(0);
 }
+
+.x{
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: transform 0.5s;
+}
+
+.y{
+  transform: translateX(100px);
+  opacity: 0;
+  transition: transform 0.5s;
+  
+}
+.show-certificate{
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+/*
 #preloader {
   position: fixed;
   top: 0;
@@ -1016,7 +1229,7 @@ footer{
   border: 5px solid #f8a840;
   border-top-color: transparent;
   animation: spin 1s linear infinite;
-  margin-left:10px;
+  margin-left: 10px;
 }
 
 .preloader-text {
@@ -1030,16 +1243,19 @@ footer{
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+*/
+
+
 .color{
   background-color: #000140;
-  transition: background 0.3s linear;
+  transition: background 0.5s linear;
 }
 
-a:hover{
+a:hover {
   cursor: pointer;
 }
-*/
