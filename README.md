@@ -1,7 +1,13 @@
-## Abosi-Godwin.github.io
+# Abosi Godwin — Full-Stack Web Developer (React / Next.js)
 
-### The Expert Shopify Ecommerce Store Designer
+I build fast, scalable business websites and web applications for companies that want more than just a “website.”
 
-<p>Check out my portfolio website here <a href="https://abosi-godwin.github.io">Here </a> </p>
+With 4+ years of hands-on experience, I focus on performance, clean architecture, and user-focused interfaces that drive real results.
 
-<p> <a href="https://www.upwork.com/freelancers/~010c925ad55e60618b"> Learn more </a> </p>
+---
+
+### 🚀 Portfolio  
+👉 https://abosi-godwin.github.io  
+
+### 💼 Hire Me on Upwork  
+👉 https://www.upwork.com/freelancers/~010c925ad55e60618b
