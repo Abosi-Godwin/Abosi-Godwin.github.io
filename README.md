@@ -10,4 +10,4 @@ With 4+ years of hands-on experience, I focus on performance, clean architecture
 👉 https://abosi-godwin.github.io  
 
 ### 💼 Hire Me on Upwork  
-👉 https://www.upwork.com/freelancers/~010c925ad55e60618b
+👉 https://www.upwork.com/freelancers/burbybon
